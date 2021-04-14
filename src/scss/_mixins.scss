@@ -1,0 +1,43 @@
+// mixin to create font-face with the font name, variant name and respective weight as parameters
+@mixin font-face($name, $variant, $variant-weight) {
+  font-family: "#{$name}";
+  src: url ("#{$font-path}/#{$name}/#{$name}-#{$variant}.ttf")
+    format("truetype");
+  font-weight: $variant-weight;
+  font-display: swap;
+}
+
+// media query mixin for mobile devices - 500px
+@mixin mobile {
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
+// media query for large mobile devices - 575px
+@mixin large-mobile {
+  @media screen and (min-width: 575px) {
+    @content;
+  }
+}
+
+// media query for tablet devices - 768px
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// media query for small desktop devices - 992px
+@mixin small-desktop {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+// media query for desktop devices - 1200px
+@mixin desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}

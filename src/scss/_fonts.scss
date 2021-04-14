@@ -1,0 +1,6 @@
+// Generating Lato font faces
+@each $variant, $variant-weight in $font-faces {
+  @font-face {
+    @include font-face($font-face, $variant, $variant-weight);
+  }
+}
