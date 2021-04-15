@@ -21,6 +21,17 @@ const config = {
         test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
+      {
+        test: /.*\.(gif|png|jpe?g)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "../assets/images/[name].[ext]",
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
