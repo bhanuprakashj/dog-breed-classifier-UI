@@ -4,9 +4,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dog Breed Classifier" />
+    <meta name="keywords" content="Classifier, Dog, Breed" />
     <title>Dog Breed Classifier</title>
   </head>
   <body>
-    <h1>Dog Breed Classifier</h1>
+    <!-- Loader -->
+    <div class="loader hidden">
+      <img src="./assets/images/loader.gif" alt="Loader" class="loader__gif" />
+      <p class="loader__text">Loading...</p>
+    </div>
+    <main class="dog-classifier">
+      <div class="dog-classifier__bg-img"></div>
+      <section class="dog-classifier__container">
+        <h1 class="dog-classifier__title">dog breed classifier</h1>
+        <div class="dog-classifier__upload-content">
+          <label for="upload-file" class="dog-classifier__choose-file btn"
+            >Choose file</label
+          >
+          <input
+            type="file"
+            id="upload-file"
+            accept="image/jpg, image/jpeg, image/png"
+            class="hidden"
+          />
+        </div>
+        <div class="dog-classifier__confirm-upload-content hidden">
+          <div class="dog-classifier__confirm-upload-content-left">
+            <div class="dog-classifier__uploaded-img-container"></div>
+            <button id="remove-btn" class="btn--red">Remove</button>
+          </div>
+          <button id="upload-btn" class="btn">Upload</button>
+        </div>
+        <div class="dog-classifier__result-content hidden">
+          <div class="dog-classifier__result-summary">
+            <p class="dog-classifier__result-text">
+              I think it is a <span id="result-breed"></span> with
+              <span id="result-score"></span>
+            </p>
+            <div class="dog-classifier__result-img-container"></div>
+          </div>
+          <button id="back-btn" class="dog-classifier__back-btn btn">
+            Back
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="dog-classifier__footer">
+      <span
+        >Designed by
+        <a href="https://www.freepik.com" target="_blank">Freepik</a></span
+      >
+    </footer>
   </body>
 </html>
